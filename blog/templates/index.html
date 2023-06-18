@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Index Page
+{% endblock %}
+
+{% block body %}
+<h3>
+    Это стартовая страница (курс Flask) <br>
+    Блог с возможностью регистрации и публикации статей<br>
+    <br>
+    Статьи про космос!<br>
+    <br>
+    <br>
+
+    {% if current_user.is_authenticated %}
+{{ current_user.username }}
+    {%endif%}
+
+    <br>
+    <br>
+    (c) Пономарев Д.В., 2023
+</h3>
+{% endblock %}
